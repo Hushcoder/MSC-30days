@@ -1,0 +1,18 @@
+if __name__ == '__main__':
+    list=[]
+    mark=[]
+    ls=[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        list.append([name,score])
+        mark.append(score)
+    s=sorted(set(mark))
+    s.remove(min(s))
+    sec_largest=min(s)
+    for val in list:
+      if sec_largest==val[1]:
+        ls.append(val[0])
+    k=sorted(ls)
+    for i in k:
+      print(i)
